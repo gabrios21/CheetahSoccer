@@ -1,0 +1,19 @@
+﻿.cheetah-one-logo {
+    background-image: url(images/cheetah_one.png);
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div.index-cols h2 {
+    margin-top: 80px;
+}
+div.index-cols p {
+    margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+    .cheetah-one-logo {
+        margin-top: 80px;
+    }
+}
+

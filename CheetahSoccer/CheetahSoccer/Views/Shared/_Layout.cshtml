@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Cheetah Soccer</title>
+    @Styles.Render("~/Content/bootswatch-lux-theme.min.css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/main.css")
+    @RenderSection("Styles", false)
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Players", "Players", "Home", new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Games", "Games", "Home", new { @class = "nav-link" })</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-background"></div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="text-center">
+            <p>&copy; @DateTime.Now.Year - Cheetah Soccer. All Rights reserved.</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
