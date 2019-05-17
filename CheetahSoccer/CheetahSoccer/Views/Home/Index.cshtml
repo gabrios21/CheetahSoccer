@@ -8,9 +8,7 @@
     <h1>Enter the best team in Ultrapark II</h1>
     <p class="lead">Register to Cheetah Soccer and be part of weekly soccer games with your coworkers!</p>
     <p>
-        <a href="https://asp.net" class="btn btn-primary btn-lg" aria-label="Register Now to Enter the Cheetah Soccer team">
-            Register Now &raquo;
-        </a>
+        @Html.ActionLink("Register Now","PlayerRegistration", "Home", new {@class= "btn btn-primary btn-lg", aria_label="Register Now to Enter the Cheetah Soccer team"})
     </p>
 </div>
 

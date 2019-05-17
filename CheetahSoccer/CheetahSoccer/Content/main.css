@@ -5,6 +5,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+div.form-group input {
+    margin-bottom: 20px;
+}
 /*Override Bootstrap styles*/
 .navbar-collapse.collapse.in {
     display: inline-block;

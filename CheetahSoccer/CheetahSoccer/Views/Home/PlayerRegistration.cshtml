@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Cheetah Soccer Player Registration";
+}
+@section Styles{
+    <link rel="stylesheet" href="~/Content/player-registration.css" type="text/css" />
+}
+<div>
+    <h1 class="heading">@ViewBag.Message</h1>
+</div>
+<form>
+    <fieldset>
+        <div class="form-group">
+            <label for="first_name">First name</label>
+            <input type="text" class="form-control" id="first_name" placeholder="Enter your first name">
+            <label for="last_name">Last name</label>
+            <input type="text" class="form-control" id="last_name" placeholder="Enter your last name">
+            <label for="email_address">Email address</label>
+            <input type="email" class="form-control" id="email_address" placeholder="Enter your email">
+            <label for="position">Field position</label>
+            <select class="form-control" id="position">
+                <option>Goalkeeper</option>
+                <option>Defender</option>
+                <option>Midfielder</option>
+                <option>Forward</option>
+            </select>
+        </div>
+    </fieldset>
+</form>

@@ -26,5 +26,12 @@ namespace CheetahSoccer.Controllers
 
             return View();
         }
+
+        public ActionResult PlayerRegistration()
+        {
+            ViewBag.Message = "Enter Cheetah Soccer";
+
+            return View();
+        }
     }
 }

@@ -162,6 +162,7 @@
     <Content Include="Content\images\cheetah_one.png" />
     <Content Include="Content\index.css" />
     <Content Include="Content\main.css" />
+    <Content Include="Content\player-registration.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -196,6 +197,7 @@
     <Content Include="Views\Home\Players.cshtml" />
     <Content Include="Views\Home\Games.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\PlayerRegistration.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
