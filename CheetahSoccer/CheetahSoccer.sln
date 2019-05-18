@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheetahSoccer", "CheetahSoccer\CheetahSoccer.csproj", "{3746CA8E-8F0F-4188-8937-50B6289D337E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheetahSoccerNg", "CheetahSoccerNg\CheetahSoccerNg.csproj", "{897D7E6B-B946-43E3-827A-2040BE68D379}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{3746CA8E-8F0F-4188-8937-50B6289D337E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3746CA8E-8F0F-4188-8937-50B6289D337E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3746CA8E-8F0F-4188-8937-50B6289D337E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{897D7E6B-B946-43E3-827A-2040BE68D379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{897D7E6B-B946-43E3-827A-2040BE68D379}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{897D7E6B-B946-43E3-827A-2040BE68D379}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{897D7E6B-B946-43E3-827A-2040BE68D379}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
