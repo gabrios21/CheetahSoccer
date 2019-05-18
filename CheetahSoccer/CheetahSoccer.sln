@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheetahSoccer", "CheetahSoc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheetahSoccerNg", "CheetahSoccerNg\CheetahSoccerNg.csproj", "{08D7E1BB-8CD0-46F9-B59B-05C9EADE4A44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheetahSoccerWebAPI", "CheetahSoccerWebAPI\CheetahSoccerWebAPI.csproj", "{D7BAEEF3-CDA3-45FB-ABE2-E3EFCE6168A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{08D7E1BB-8CD0-46F9-B59B-05C9EADE4A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08D7E1BB-8CD0-46F9-B59B-05C9EADE4A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08D7E1BB-8CD0-46F9-B59B-05C9EADE4A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7BAEEF3-CDA3-45FB-ABE2-E3EFCE6168A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7BAEEF3-CDA3-45FB-ABE2-E3EFCE6168A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7BAEEF3-CDA3-45FB-ABE2-E3EFCE6168A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7BAEEF3-CDA3-45FB-ABE2-E3EFCE6168A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
