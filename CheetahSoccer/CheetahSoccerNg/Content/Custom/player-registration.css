@@ -1,0 +1,10 @@
+﻿.heading {
+    padding: 4rem 0rem;
+}
+
+/*Override Bootstrap styles*/
+@media (max-width: 768px) {
+    .container {
+        padding: 0px 30px;
+    }
+}
