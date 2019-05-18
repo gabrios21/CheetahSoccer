@@ -8,6 +8,9 @@
 div.form-group input {
     margin-bottom: 20px;
 }
+.mbottom50 {
+    margin-bottom: 50px;
+}
 /*Override Bootstrap styles*/
 .navbar-collapse.collapse.in {
     display: inline-block;

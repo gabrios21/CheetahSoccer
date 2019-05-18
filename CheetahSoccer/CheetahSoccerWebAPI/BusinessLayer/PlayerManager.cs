@@ -14,8 +14,6 @@ namespace CheetahSoccerWebAPI.BusinessLayer
 
         public Response CreatePlayer(Player player) {
 
-
-
             if (playerExists(player))
             {
                 response.statusCode = 400;

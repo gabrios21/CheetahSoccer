@@ -15,14 +15,14 @@ namespace CheetahSoccer.Controllers
 
         public ActionResult Players()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Players";
 
             return View();
         }
 
         public ActionResult Games()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Upcoming Games";
 
             return View();
         }
