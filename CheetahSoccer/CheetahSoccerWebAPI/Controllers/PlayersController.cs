@@ -15,34 +15,65 @@ namespace CheetahSoccerWebAPI.Controllers
         PlayerManager manager = new PlayerManager();
   
         // GET: api/Players
-        public IEnumerable<string> Get()
+        public IHttpActionResult Get()
         {
-            manager.GetAllPlayers();
-            return new string[] { "value1", "value2" };
+            List<Player> playerLst = manager.GetAllPlayers();
+            if (playerLst.Count() > 0)
+            {
+                return Ok(playerLst);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
         // GET: api/Players/5
-        public string Get(Player player)
+        public IHttpActionResult Get(string email)
         {
-            manager.GetPlayer(player);
-            return "value";
+            Player player = manager.GetPlayer(email);
+            if (player != null)
+            {
+                return Ok(player);
+            }
+            else
+            {
+                return NotFound();
+            }
+            
         }
 
         // POST: api/Players
-        public void Post([FromBody]Player player)
+        public IHttpActionResult Post([FromBody]Player player)
         {
-            manager.CreatePlayer(player);
+            var response = manager.CreatePlayer(player);
+
+            if (response.statusCode == 200) {
+                return Ok(response.message);
+            }
+            return BadRequest(response.message);
         }
 
         // PUT: api/Players/5
-        public void Put([FromBody]Player player)
+        public IHttpActionResult Put([FromBody]Player player)
         {
-            manager.UpdatePlayer(player);
+            var response = manager.UpdatePlayer(player);
+
+            if (response.statusCode == 200)
+            {
+                return Ok(response.message);
+            }
+            return BadRequest(response.message);
         }
 
-        public void Delete(Player player)
+        public IHttpActionResult Delete(Player player)
         {
-            manager.DeletePlayer(player);
+            var response = manager.DeletePlayer(player);
+            if (response.statusCode == 200)
+            {
+                return Ok(response.message);
+            }
+            return BadRequest(response.message);
         }
     }
 }

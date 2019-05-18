@@ -10,72 +10,90 @@ namespace CheetahSoccerWebAPI.BusinessLayer
     public class PlayerManager
     {
         IPlayerRepository dataAccess = new PlayerRepository();
+        Response response = new Response();
 
-        public string CreatePlayer(Player player) {
+        public Response CreatePlayer(Player player) {
+
+
 
             if (playerExists(player))
             {
-                return "Error while inserting player. You are already part of the Cheetah Soccer team";
+                response.statusCode = 400;
+                response.message = "Error while inserting player. You are already part of the Cheetah Soccer team";
             }
             else
             {
                 bool isSuccessful = dataAccess.Insert(player);
                 if (isSuccessful)
                 {
-                    return "Welcome aboard! You are now part of the Cheetah Soccer team";
+                    response.statusCode = 200;
+                    response.message = "Welcome aboard! You are now part of the Cheetah Soccer team";
                 }
                 else
                 {
-                    return "Error while inserting player";
+                    response.statusCode = 400;
+                    response.message = "Error while inserting player";
                 }
             }
+
+            return response;
         }
 
-        public string UpdatePlayer(Player player)
+        public Response UpdatePlayer(Player player)
         {
             if (playerExists(player))
             {
                 bool isSuccessful = dataAccess.Update(player);
                 if (isSuccessful)
                 {
-                    return "Your information was successfully updated.";
+                    response.statusCode = 200;
+                    response.message = "Your information was successfully updated.";
                 }
                 else
                 {
-                    return "Error while updating player";
+                    response.statusCode = 400;
+                    response.message = "Error while updating player";
                 }
             }
             else
             {
-                return "You are not part of the Cheetah Soccer team. Please register first";
+                response.statusCode = 400;
+                response.message = "You are not part of the Cheetah Soccer team. Please register first";
             }
+
+            return response;
         }
 
         public List<Player> GetAllPlayers(){
             return dataAccess.GetAll();
         }
 
-        public Player GetPlayer(Player player) {
-            return dataAccess.Find(player.Email);
+        public Player GetPlayer(string email) {
+            return dataAccess.Find(email);
         }
 
-        public string DeletePlayer(Player player) {
+        public Response DeletePlayer(Player player) {
             if (playerExists(player))
             {
                 bool isSuccessful = dataAccess.Delete(player.Email);
                 if (isSuccessful)
                 {
-                    return "Your information has been deleted. You are not longer part of the Cheetah Soccer team";
+                    response.statusCode = 200;
+                    response.message = "Your information has been deleted. You are not longer part of the Cheetah Soccer team";
                 }
                 else
                 {
-                    return "Error while deleting player";
+                    response.statusCode = 400;
+                    response.message = "Error while deleting player";
                 }
             }
             else
             {
-                return "You are not part of the Cheetah Soccer team.";
+                response.statusCode = 400;
+                response.message = "You are not part of the Cheetah Soccer team";
             }
+
+            return response;
         }
 
         public bool playerExists(Player player) {
