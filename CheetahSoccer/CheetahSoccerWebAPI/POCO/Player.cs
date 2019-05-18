@@ -7,12 +7,11 @@ namespace CheetahSoccerWebAPI.POCO
 {
     public class Player
     {
-        public string email { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string fieldPosition { get; set; }
-        public string strongFoot { get; set; }
-        public string picture { get; set; }
-
+        public string Email { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string FieldPosition { get; set; }
+        public string StrongFoot { get; set; }
+        public string Picture { get; set; }
     }
 }

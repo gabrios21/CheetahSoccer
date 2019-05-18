@@ -2,8 +2,8 @@
 {
     public class Court
     {
-        public int id { get; set; }
-        public string courtName { get; set; }
-        public string courtDescription { get; set; }
+        public int Id { get; set; }
+        public string CourtName { get; set; }
+        public string CourtDescription { get; set; }
     }
 }

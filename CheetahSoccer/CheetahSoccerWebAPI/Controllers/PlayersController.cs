@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CheetahSoccerWebAPI.BusinessLayer;
+using CheetahSoccerWebAPI.DataAccess;
+using CheetahSoccerWebAPI.POCO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,31 +12,37 @@ namespace CheetahSoccerWebAPI.Controllers
 {
     public class PlayersController : ApiController
     {
+        PlayerManager manager = new PlayerManager();
+  
         // GET: api/Players
         public IEnumerable<string> Get()
         {
+            manager.GetAllPlayers();
             return new string[] { "value1", "value2" };
         }
 
         // GET: api/Players/5
-        public string Get(int id)
+        public string Get(Player player)
         {
+            manager.GetPlayer(player);
             return "value";
         }
 
         // POST: api/Players
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Player player)
         {
+            manager.CreatePlayer(player);
         }
 
         // PUT: api/Players/5
-        public void Put(int id, [FromBody]string value)
+        public void Put([FromBody]Player player)
         {
+            manager.UpdatePlayer(player);
         }
 
-        // DELETE: api/Players/5
-        public void Delete(int id)
+        public void Delete(Player player)
         {
+            manager.DeletePlayer(player);
         }
     }
 }

@@ -7,10 +7,10 @@ namespace CheetahSoccerWebAPI.POCO
 {
     public class GameInfo
     {
-        public Game game { get; set; }
-        public List<Player> players { get; set; }
-        public int goals { get; set; }
-        public int assists { get; set; }
-        public int fouls { get; set; }
+        public Game Game { get; set; }
+        public List<Player> Players { get; set; }
+        public int Goals { get; set; }
+        public int Assists { get; set; }
+        public int Fouls { get; set; }
     }
 }

@@ -15,8 +15,8 @@ namespace CheetahSoccerWebAPI
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "api/{controller}/{id}",
+                defaults: new { controller = "values", id = UrlParameter.Optional }
             );
         }
     }
