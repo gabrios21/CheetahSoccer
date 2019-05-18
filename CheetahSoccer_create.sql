@@ -14,7 +14,7 @@ CREATE TABLE Player (
 -- Table: Game
 -- Contains the Game information
 CREATE TABLE Game (
-    Id varchar(3)  IDENTITY NOT NULL,
+    Id int  IDENTITY NOT NULL,
     CourtId int  NOT NULL,
     GameDate datetime NOT NULL,
     CONSTRAINT Game_pk PRIMARY KEY  (Id)
@@ -23,7 +23,7 @@ CREATE TABLE Game (
 -- Table: GameInfo
 -- Contains the stats of each game. 
 CREATE TABLE GameInfo (
-    GameId varchar(3) NOT NULL,
+    GameId int NOT NULL,
     PlayerEmail nvarchar(100) NOT NULL,
     Goals int NULL,
     Assists int NULL,
@@ -43,7 +43,7 @@ CREATE TABLE Court (
 -- Foreign keys
 -- Reference: Game To Court (table: Game)
 ALTER TABLE Game ADD CONSTRAINT Game_To_Court
-    FOREIGN KEY (GameId)
+    FOREIGN KEY (CourtId)
     REFERENCES Court (Id);
 
 -- Reference: GameInfo to Game (table: GameInfo)
