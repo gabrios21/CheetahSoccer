@@ -1,0 +1,44 @@
+﻿.cheetah-one-logo {
+    background-image: url(../images/cheetah_one.png);
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div.index-cols h2 {
+    margin-top: 80px;
+}
+div.index-cols p {
+    margin-bottom: 30px;
+}
+.header-background {
+    background-image: url(../images/bg.jpg);
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.form-group input {
+    margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .cheetah-one-logo {
+        margin-top: 80px;
+    }
+}
+/*Override Bootstrap styles*/
+.navbar-collapse.collapse.in {
+    display: inline-block;
+}
+.jumbotron {
+    background-color: #b0e3e3;
+}
+.container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}

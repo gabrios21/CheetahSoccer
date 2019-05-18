@@ -69,12 +69,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angular-CheetahSoccer\index.html" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootswatch-lux-template.css" />
+    <Content Include="Content\bootswatch-lux-template.min.css" />
+    <Content Include="Content\Custom\index.css" />
+    <Content Include="Content\Custom\player-registration.css" />
+    <Content Include="Content\images\bg.jpg" />
+    <Content Include="Content\images\cheetah_one.png" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
