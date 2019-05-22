@@ -1,8 +1,18 @@
 ﻿(function () {
-    var playerhttp = function ($http)
+    var playerHttp = function ($http)
     {
-        var getPlayer = function (email) {
-            return $http.get("")
-        }
+        var url = "http://localhost:56706/api/players/1";
+        var getPlayer = function (id) {
+            return $http.get("url")
+                .then(function (response) {
+                    return response.data
+                });
+        };
+        return {
+            getPlayer: getPlayer
+        };
     }
-})());
+
+    var module = angular.module("cheetahSoccer");
+    module.factory("playerHttp",playerHttp);
+}());
