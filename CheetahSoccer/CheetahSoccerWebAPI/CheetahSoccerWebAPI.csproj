@@ -150,7 +150,7 @@
     <Compile Include="BusinessLayer\GameInfoManager.cs" />
     <Compile Include="BusinessLayer\GameManager.cs" />
     <Compile Include="BusinessLayer\PlayerManager.cs" />
-    <Compile Include="BusinessLayer\Response.cs" />
+    <Compile Include="POCO\Response.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
