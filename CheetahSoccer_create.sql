@@ -2,13 +2,14 @@
 -- Table: Player
 -- Contains the Player information
 CREATE TABLE Player (
+    Id int NOT NULL IDENTITY,
     Email nvarchar(100)  NOT NULL,
     FirstName varchar(50) NOT NULL,
     LastName varchar(50) NOT NULL,
     FieldPosition varchar(100) NOT NULL,
     StrongFoot varchar(10) NULL,
     Picture nvarchar(100) NULL,
-    CONSTRAINT Player_pk PRIMARY KEY  (Email)
+    CONSTRAINT Player_pk PRIMARY KEY  (Id)
 );
 
 -- Table: Game
@@ -24,11 +25,11 @@ CREATE TABLE Game (
 -- Contains the stats of each game. 
 CREATE TABLE GameInfo (
     GameId int NOT NULL,
-    PlayerEmail nvarchar(100) NOT NULL,
+    PlayerId int NOT NULL,
     Goals int NULL,
     Assists int NULL,
     Fouls int NULL,
-    CONSTRAINT GameInfo_pk PRIMARY KEY  (GameId , PlayerEmail)
+    CONSTRAINT GameInfo_pk PRIMARY KEY  (GameId , PlayerId)
 );
 
 -- Table: Court
@@ -53,8 +54,8 @@ ALTER TABLE GameInfo ADD CONSTRAINT GameInfo_To_Game
 
 -- Reference: GameInfo to Player (table: GameInfo)
 ALTER TABLE GameInfo ADD CONSTRAINT GameInfo_To_Player
-    FOREIGN KEY (PlayerEmail)
-    REFERENCES Player (Email);
+    FOREIGN KEY (PlayerId)
+    REFERENCES Player (Id);
 
 -- End of file.
 
