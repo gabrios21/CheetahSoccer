@@ -14,9 +14,9 @@ namespace CheetahSoccerWebAPI.DataAccess
     {
         private IDbConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["cheetahSoccerDB"].ConnectionString);
 
-        public Player Find(string email)
+        public Player Find(int id)
         {
-            return this.conn.Query<Player>("SELECT * FROM Player WHERE Email = @Email;", new {email}).SingleOrDefault();
+            return this.conn.Query<Player>("SELECT * FROM Player WHERE Id = @id;", new {id}).SingleOrDefault();
         }
 
         public List<Player> GetAll()
@@ -54,10 +54,10 @@ namespace CheetahSoccerWebAPI.DataAccess
             return success;
         }
 
-        public bool Delete(string email)
+        public bool Delete(int id)
         {
             bool success = false;
-            if (this.conn.Execute("DELETE FROM Player WHERE EMAIL = @Email;", new { email }) > 0) {
+            if (this.conn.Execute("DELETE FROM Player WHERE Id = @id;", new { id }) > 0) {
                 success = true;
             }
             return success;

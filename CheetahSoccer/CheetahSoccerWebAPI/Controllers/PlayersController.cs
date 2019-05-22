@@ -29,9 +29,9 @@ namespace CheetahSoccerWebAPI.Controllers
         }
 
         // GET: api/Players/5
-        public IHttpActionResult Get(string email)
+        public IHttpActionResult Get(int id)
         {
-            Player player = manager.GetPlayer(email);
+            Player player = manager.GetPlayer(id);
             if (player != null)
             {
                 return Ok(player);
