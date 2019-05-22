@@ -2,8 +2,8 @@
     var playerHttp = function ($http)
     {
         var url = "http://localhost:56706/api/players/1";
-        var getPlayer = function (id) {
-            return $http.get("url")
+        var getPlayer = function () {
+            return $http.get(url)
                 .then(function (response) {
                     return response.data
                 });
@@ -14,5 +14,5 @@
     }
 
     var module = angular.module("cheetahSoccer");
-    module.factory("playerHttp",playerHttp);
+    module.factory("playerHttp", playerHttp);
 }());
