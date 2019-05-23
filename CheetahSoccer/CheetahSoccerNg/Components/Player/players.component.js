@@ -1,23 +1,23 @@
 ﻿(function () {
-    "use strict"
+    "use strict";
 
     var module = angular.module("cheetahSoccer");
 
-    function controller(playerHttp) {
-        var self = this;
-
-        self.$onInit = function() {
-            playerHttp.getPlayer()
-                .then(function (player) {
-                    self.player = player
-                });
-        };
-    }
-
     module.component("players", {
         templateUrl: "/Views/players.html",
-        controllerAs: "playersModel",
-        controller: ["playerHttp", controller]
+        controllerAs: "model",
+        controller: function ($http) {
+            var model = this;
+            $http.get('http://localhost:56706/api/players')
+                .then(function (response) {
+                    model.players = response.data;
+                }).catch(function (response) {
+                    console.error('Error', response.status, response.data);
+                }).finally(function () {
+                    console.log("Task Finished");
+                });
+
+        }
     });
 
 }());

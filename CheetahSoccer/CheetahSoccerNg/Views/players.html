@@ -1,3 +1,23 @@
-﻿<div style="font-size:30px;">
-    <p>{{player.FirstName}}</p>
+﻿<div>
+    <h2>Cheetah Soccer Players</h2>
 </div>
+<table class="table table-hover">
+    <thead>
+        <tr class="table-active">
+            <th scope="col">Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Field Position</th>
+            <th scope="col">Strong Foot</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="player in model.players">
+            <td>{{player.FirstName}}</td>
+            <td>{{player.LastName}}</td>
+            <td>{{player.Email}}</td>
+            <td>{{player.FieldPosition}}</td>
+            <td>{{player.StrongFoot}}</td>
+        </tr>
+    </tbody>
+</table>
