@@ -1,15 +1,16 @@
 ﻿(function () {
-    "use strict";
+    "use strict"
 
     var module = angular.module("cheetahSoccer");
 
     function controller(playerHttp) {
-        var model = this;
-        model.$oninit = function () {
-            playerHttp.getPlayer
-                .then(function (player){
-                    model.player = player;
-            });
+        var self = this;
+
+        self.$onInit = function() {
+            playerHttp.getPlayer()
+                .then(function (player) {
+                    self.player = player
+                });
         };
     }
 

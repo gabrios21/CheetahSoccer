@@ -13,6 +13,6 @@ namespace CheetahSoccerWebAPI.DataAccess
         List<Player> GetAll();
         bool Insert(Player player);
         bool Update(Player player);
-        bool Delete(string email);
+        bool Delete(int id);
     }
 }
