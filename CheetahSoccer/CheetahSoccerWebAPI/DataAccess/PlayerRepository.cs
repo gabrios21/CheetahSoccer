@@ -14,9 +14,9 @@ namespace CheetahSoccerWebAPI.DataAccess
     {
         private IDbConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["cheetahSoccerDB"].ConnectionString);
 
-        public Player Find(string email)
+        public Player Find(int id)
         {
-            return this.conn.Query<Player>("SELECT * FROM Player WHERE Email = @Email;", new {email}).SingleOrDefault();
+            return this.conn.Query<Player>("SELECT * FROM Player WHERE Id = @Id;", new {id}).SingleOrDefault();
         }
 
         public List<Player> GetAll()

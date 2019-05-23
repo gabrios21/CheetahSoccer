@@ -66,8 +66,8 @@ namespace CheetahSoccerWebAPI.BusinessLayer
             return dataAccess.GetAll();
         }
 
-        public Player GetPlayer(string email) {
-            return dataAccess.Find(email);
+        public Player GetPlayer(int id) {
+            return dataAccess.Find(id);
         }
 
         public Response DeletePlayer(Player player) {
@@ -96,7 +96,7 @@ namespace CheetahSoccerWebAPI.BusinessLayer
 
         public bool playerExists(Player player) {
 
-            if (dataAccess.Find(player.Email) != null)
+            if (dataAccess.Find(player.id) != null)
             {
                 return true;
             }
