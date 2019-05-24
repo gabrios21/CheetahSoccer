@@ -5,40 +5,27 @@
 
         function getAll() {
             return $http
-                .get('http://localhost:56706/api/players');
+                .get('http://localhost:62029/web/api/players');
         }
 
         function find(id) {
             return $http
-                .get('http://localhost:56706/api/players/' + id);
+                .get('http://localhost:62029/web/api/players/' + id);
         }
 
         function save(player) {
             return $http
-                .post('http://localhost:56706/api/players', player);
+                .post('http://localhost:62029/web/api/players', player);
         }
 
         function  update(player) {
            return $http
-               .put('http://localhost:56706/api/players', player);
+               .put('http://localhost:62029/web/api/players/', player);
         }
 
-        function remove(player) {
-           return $http({
-                url: 'http://localhost:56706',
-                method: 'DELETE',
-                data: {
-                    "Email": player.Email,
-                    "FirstName": player.FirstName,
-                    "LastName": player.LastName,
-                    "FieldPosition": player.FieldPosition,
-                    "StrongFoot": player.StrongFoot,
-                    "Picture": player.Picture
-                }
-            })
-                .then(function (response) {
-                    return response.data;
-                });
+        function remove(id) {
+           return $http
+               .delete('http://localhost:62029/web/api/players/' + id);
         }
 
         return {

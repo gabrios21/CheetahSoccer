@@ -1,11 +1,14 @@
 ﻿(function () {
     "use strict";
 
-    function registerPlayerController(dataAccess) {
+    function registerPlayerController(dataAccess, $location) {
 
         var vm = this;
         vm.registerForm = {};
-        vm.addPlayer = addPlayer();
+        vm.message = '';
+        vm.display = 'd-none';
+        vm.addPlayer = addPlayer;
+        vm.back = back;
 
         vm.newPlayer = {
             "FirstName": "",
@@ -27,10 +30,18 @@
                         "StrongFoot": "",
                         "Picture": ""
                     };
+                    vm.message = 'Welcome to the team! Your information was registered successfully';
+                    vm.display = '';
                 })
                 .catch(function (response) {
+                    vm.message = 'Error while registering player';
+                    vm.display = '';
                     console.log(response);
                 });
+        }
+
+        function back() {
+            $location.path('/home');
         }
     }
 

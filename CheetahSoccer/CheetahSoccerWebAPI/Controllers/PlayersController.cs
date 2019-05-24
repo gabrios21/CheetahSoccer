@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace CheetahSoccerWebAPI.Controllers
 {
@@ -66,9 +67,9 @@ namespace CheetahSoccerWebAPI.Controllers
             return BadRequest(response.message);
         }
 
-        public IHttpActionResult Delete([FromBody]Player player)
+        public IHttpActionResult Delete(int id)
         {
-            var response = manager.DeletePlayer(player);
+            var response = manager.DeletePlayer(id);
             if (response.statusCode == 200)
             {
                 return Ok(response.message);

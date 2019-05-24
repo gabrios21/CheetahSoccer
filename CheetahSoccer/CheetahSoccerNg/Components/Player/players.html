@@ -3,16 +3,16 @@
 </div>
 <div class="row index-cols">
     <div class="col-md-3">
-        <p>Name:<br><input type="text" ng-model="searchByName"></p>
+        <p>Filter By Name:<br><input type="text" ng-model="searchByName"></p>
     </div>
     <div class="col-md-3">
-        <p>Last Name:<br><input type="text" ng-model="searchByLastName"></p>
+        <p>Filter By Last Name:<br><input type="text" ng-model="searchByLastName"></p>
     </div>
     <div class="col-md-3">
-        <p>Email:<br><input type="text" ng-model="searchByEmail"></p>
+        <p>Filter By Email:<br><input type="text" ng-model="searchByEmail"></p>
     </div>
     <div class="col-md-3">
-        <p>FieldPosition:<br><input type="text" ng-model="searchByPosition"></p>
+        <p>Filter By Field Position:<br><input type="text" ng-model="searchByPosition"></p>
     </div>
 </div>
 <table class="table table-hover">
@@ -26,8 +26,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="player in ctrl.allPlayers | orderBy: 'FirstName' | 
-            filter:searchByName | filter:searchByLastName | filter:searchByEmail| 
+        <tr ng-repeat="player in ctrl.allPlayers | orderBy: 'FirstName' |
+            filter:searchByName | filter:searchByLastName | filter:searchByEmail|
             filter:searchByPosition" ng-click="ctrl.edit(player)">
             <td>{{player.FirstName}}</td>
             <td>{{player.LastName}}</td>
@@ -37,3 +37,6 @@
         </tr>
     </tbody>
 </table>
+<fieldset>
+    <button ng-click="ctrl.back()" type="button" class="btn btn-info float-right">Back</button>
+</fieldset>

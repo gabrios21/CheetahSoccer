@@ -70,10 +70,10 @@ namespace CheetahSoccerWebAPI.BusinessLayer
             return dataAccess.Find(id);
         }
 
-        public Response DeletePlayer(Player player) {
-            if (playerExists(player.Email))
+        public Response DeletePlayer(int id) {
+            if (dataAccess.Find(id) != null)
             {
-                bool isSuccessful = dataAccess.Delete(player.Id);
+                bool isSuccessful = dataAccess.Delete(id);
                 if (isSuccessful)
                 {
                     response.statusCode = 200;

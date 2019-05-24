@@ -48,10 +48,11 @@ namespace CheetahSoccerWebAPI.DataAccess
                 "UPDATE Player " +
                 "SET FirstName = @FirstName, " +
                     "LastName = @LastName, " +
+                    "Email = @Email, " +
                     "FieldPosition = @FieldPosition, " +
                     "StrongFoot = @StrongFoot, " +
                     "Picture = @Picture " +
-                    "WHERE Email = @Email;";
+                    "WHERE Id = @Id;";
 
             if (this.conn.Execute(sqlStatement,player) > 0)
             {
