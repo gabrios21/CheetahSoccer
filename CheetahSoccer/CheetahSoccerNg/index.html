@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CheetahSoccer</title>
+    <!--CSS scripts-->
+    <link href="../Styles/Custom/bootswatch-lux-theme.min.css" rel="stylesheet" />
+    <link href="../Styles/Custom/index.css" rel="stylesheet" />
+</head>
+<body ng-app="cheetahSoccer">
+    <div ng-include="'Components/Nav/nav.html'"></div>
+    <div class="header-background"></div>
+    <div class="container body-content">
+        <div ng-view></div>
+        <hr />
+        <footer class="text-center">
+            <p>&copy; Cheetah Soccer. All Rights reserved.</p>
+        </footer>
+    </div>
+    <!--JS scripts-->
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="cheetahsoccer.module.js"></script>
+    <script src="Factories/data-access.js"></script>
+    <script src="Components/Player/players.controller.js"></script>
+    <script src="Components/Home/home.controller.js"></script>
+    <script src="Components/Register/register.controller.js"></script>
+</body>
+</html>

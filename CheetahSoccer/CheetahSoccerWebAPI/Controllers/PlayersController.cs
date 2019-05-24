@@ -66,7 +66,7 @@ namespace CheetahSoccerWebAPI.Controllers
             return BadRequest(response.message);
         }
 
-        public IHttpActionResult Delete(Player player)
+        public IHttpActionResult Delete([FromBody]Player player)
         {
             var response = manager.DeletePlayer(player);
             if (response.statusCode == 200)

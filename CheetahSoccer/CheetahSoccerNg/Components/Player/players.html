@@ -9,15 +9,17 @@
             <th scope="col">Email</th>
             <th scope="col">Field Position</th>
             <th scope="col">Strong Foot</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="player in model.players">
+        <tr ng-repeat="player in ctrl.allPlayers">
             <td>{{player.FirstName}}</td>
             <td>{{player.LastName}}</td>
             <td>{{player.Email}}</td>
             <td>{{player.FieldPosition}}</td>
             <td>{{player.StrongFoot}}</td>
+            <td ng-click="ctrl.edit(player)">EDIT</td>
         </tr>
     </tbody>
 </table>

@@ -68,9 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cheetahsoccer.module.js" />
+    <Content Include="Components\Home\home.controller.js" />
+    <Content Include="Components\Home\home.html" />
     <Content Include="Components\Player\players.component.js" />
+    <Content Include="Components\Player\players.controller.js" />
+    <Content Include="Components\Register\register.controller.js" />
+    <Content Include="Components\Register\register.html" />
     <Content Include="Components\Welcome\welcome.component.js" />
-    <Content Include="Services\playerHttp.service.js" />
+    <Content Include="Factories\data-access.js" />
+    <Content Include="Components\Nav\nav.html" />
+    <Content Include="route-config.js" />
     <Content Include="Styles\bootstrap-grid.css" />
     <Content Include="Styles\bootstrap-grid.min.css" />
     <Content Include="Styles\bootstrap-reboot.css" />
@@ -115,8 +122,8 @@
     <Content Include="Styles\Custom\bootswatch-lux-theme.css" />
     <Content Include="Styles\Custom\bootswatch-lux-theme.min.css" />
     <Content Include="Styles\Custom\index.css" />
-    <Content Include="Views\index.html" />
-    <Content Include="Views\players.html" />
+    <Content Include="index.html" />
+    <Content Include="Components\Player\players.html" />
     <Content Include="Views\welcome.html" />
     <None Include=".bin\node.cmd" />
     <None Include="packages.config" />
