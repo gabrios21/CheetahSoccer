@@ -5,18 +5,29 @@
         .module('cheetahSoccer')
         .config(config);
 
-    function ($routeProvider) {
+    function config($routeProvider) {
         $routeProvider
-            .when('/players', {
-                templateUrl: 'Components/Player/players.html',
-                controller: 'PlayersController',
-                controllerAs: 'players'
-            })
-            .when('/home', {
-                templateUrl: 'Components/Home/home.html',
-                controller: 'HomeController',
-                controllerAs: 'home'
-            })
-            .otherwise('/home');
+                .when('/home', {
+                    templateUrl: 'Components/Home/home.html',
+                    controller: 'HomeController',
+                    controllerAs: 'ctrl'
+                })
+                .when('/players', {
+                    templateUrl: 'Components/Player/players.html',
+                    controller: 'PlayersController',
+                    controllerAs: 'ctrl'
+                })
+                .when('/register', {
+                    templateUrl: 'Components/Register/register.html',
+                    controller: 'RegisterController',
+                    controllerAs: 'ctrl'
+                })
+                .when('/games', {
+                    templateUrl: 'Components/Games/games.html',
+                    controller: 'GamesController',
+                    controllerAs: 'ctrl'
+                })
+                .otherwise('/home');
     }
+
 })();

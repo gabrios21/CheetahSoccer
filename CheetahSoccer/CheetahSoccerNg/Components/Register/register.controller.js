@@ -17,8 +17,7 @@
 
         vm.addPlayer = function () {
             dataAccess.save(vm.newPlayer)
-                .then(function (response) {
-                    alert(response.data.message);
+                .then(function () {
                     vm.newPlayer = {
                         "FirstName": "",
                         "LastName": "",
@@ -29,7 +28,7 @@
                     };
                 })
                 .catch(function (response) {
-                    alert(response.data.message);
+                    console.log(response);
                 });
         };
     }

@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cheetahsoccer.module.js" />
+    <Content Include="Components\Games\games.controller.js" />
+    <Content Include="Components\Games\games.html" />
     <Content Include="Components\Home\home.controller.js" />
     <Content Include="Components\Home\home.html" />
     <Content Include="Components\Player\players.component.js" />
@@ -124,7 +126,6 @@
     <Content Include="Styles\Custom\index.css" />
     <Content Include="index.html" />
     <Content Include="Components\Player\players.html" />
-    <Content Include="Views\welcome.html" />
     <None Include=".bin\node.cmd" />
     <None Include="packages.config" />
     <Content Include="Scripts\angular-animate.min.js.map" />

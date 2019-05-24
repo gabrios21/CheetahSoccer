@@ -11,7 +11,7 @@
             });
 
         vm.edit = function (player) {
-            console.log(player)
+            console.log(player);
         };
     }
 

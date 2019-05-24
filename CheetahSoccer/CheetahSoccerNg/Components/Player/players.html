@@ -1,5 +1,19 @@
 ﻿<div>
-    <h2>Cheetah Soccer Players</h2>
+    <h1>Cheetah Soccer Players</h1>
+</div>
+<div class="row index-cols">
+    <div class="col-md-3">
+        <p>Name:<br><input type="text" ng-model="searchByName"></p>
+    </div>
+    <div class="col-md-3">
+        <p>Last Name:<br><input type="text" ng-model="searchByLastName"></p>
+    </div>
+    <div class="col-md-3">
+        <p>Email:<br><input type="text" ng-model="searchByEmail"></p>
+    </div>
+    <div class="col-md-3">
+        <p>FieldPosition:<br><input type="text" ng-model="searchByPosition"></p>
+    </div>
 </div>
 <table class="table table-hover">
     <thead>
@@ -9,17 +23,17 @@
             <th scope="col">Email</th>
             <th scope="col">Field Position</th>
             <th scope="col">Strong Foot</th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="player in ctrl.allPlayers">
+        <tr ng-repeat="player in ctrl.allPlayers | orderBy: 'FirstName' | 
+            filter:searchByName | filter:searchByLastName | filter:searchByEmail| 
+            filter:searchByPosition" ng-click="ctrl.edit(player)">
             <td>{{player.FirstName}}</td>
             <td>{{player.LastName}}</td>
             <td>{{player.Email}}</td>
             <td>{{player.FieldPosition}}</td>
             <td>{{player.StrongFoot}}</td>
-            <td ng-click="ctrl.edit(player)">EDIT</td>
         </tr>
     </tbody>
 </table>
