@@ -14,7 +14,7 @@ namespace CheetahSoccerWebAPI.BusinessLayer
 
         public Response CreatePlayer(Player player) {
 
-            if (playerExists(player))
+            if (playerExists(player.Email))
             {
                 response.statusCode = 400;
                 response.message = "Error while inserting player. You are already part of the Cheetah Soccer team";
@@ -39,7 +39,7 @@ namespace CheetahSoccerWebAPI.BusinessLayer
 
         public Response UpdatePlayer(Player player)
         {
-            if (playerExists(player))
+            if (playerExists(player.Email))
             {
                 bool isSuccessful = dataAccess.Update(player);
                 if (isSuccessful)
@@ -71,7 +71,7 @@ namespace CheetahSoccerWebAPI.BusinessLayer
         }
 
         public Response DeletePlayer(Player player) {
-            if (playerExists(player))
+            if (playerExists(player.Email))
             {
                 bool isSuccessful = dataAccess.Delete(player.Id);
                 if (isSuccessful)
@@ -94,9 +94,9 @@ namespace CheetahSoccerWebAPI.BusinessLayer
             return response;
         }
 
-        public bool playerExists(Player player) {
+        public bool playerExists(string email) {
 
-            if (dataAccess.Find(player.Id) != null)
+            if (dataAccess.FindByEmail(email) != null)
             {
                 return true;
             }

@@ -18,13 +18,18 @@
                     controllerAs: 'ctrl'
                 })
                 .when('/register', {
-                    templateUrl: 'Components/Register/register.html',
-                    controller: 'RegisterController',
+                    templateUrl: 'Components/Player/register.html',
+                    controller: 'RegisterPlayerController',
                     controllerAs: 'ctrl'
                 })
                 .when('/games', {
                     templateUrl: 'Components/Games/games.html',
                     controller: 'GamesController',
+                    controllerAs: 'ctrl'
+                })
+                .when('/player/edit/:Id', {
+                    templateUrl: 'Components/Player/edit.html',
+                    controller: 'EditPlayerController',
                     controllerAs: 'ctrl'
                 })
                 .otherwise('/home');

@@ -1,10 +1,11 @@
 ﻿(function () {
     "use strict";
 
-    function registerController(dataAccess) {
+    function registerPlayerController(dataAccess) {
 
         var vm = this;
         vm.registerForm = {};
+        vm.addPlayer = addPlayer();
 
         vm.newPlayer = {
             "FirstName": "",
@@ -15,7 +16,7 @@
             "Picture": ""
         };
 
-        vm.addPlayer = function () {
+        function addPlayer() {
             dataAccess.save(vm.newPlayer)
                 .then(function () {
                     vm.newPlayer = {
@@ -30,11 +31,11 @@
                 .catch(function (response) {
                     console.log(response);
                 });
-        };
+        }
     }
 
     angular
         .module('cheetahSoccer')
-        .controller('RegisterController', registerController);
+        .controller('RegisterPlayerController', registerPlayerController);
 
 })();

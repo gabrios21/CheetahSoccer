@@ -19,6 +19,12 @@ namespace CheetahSoccerWebAPI.DataAccess
             return this.conn.Query<Player>("SELECT * FROM Player WHERE Id = @id;", new {id}).SingleOrDefault();
         }
 
+        public Player FindByEmail(string email)
+        {
+            return this.conn.Query<Player>("SELECT * FROM Player WHERE Email = @email;", new { email }).SingleOrDefault();
+        }
+
+
         public List<Player> GetAll()
         {
             return this.conn.Query<Player>("SELECT * FROM Player;").ToList();

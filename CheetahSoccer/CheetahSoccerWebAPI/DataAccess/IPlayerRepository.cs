@@ -9,7 +9,8 @@ namespace CheetahSoccerWebAPI.DataAccess
 {
     public interface IPlayerRepository
     {
-        Player Find (int id);
+        Player Find(int id);
+        Player FindByEmail(string email);
         List<Player> GetAll();
         bool Insert(Player player);
         bool Update(Player player);

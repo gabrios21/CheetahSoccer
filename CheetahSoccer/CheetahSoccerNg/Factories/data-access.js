@@ -9,11 +9,8 @@
         }
 
         function find(id) {
-            $http
-                .get('http://localhost:56706/api/players/' + id)
-                .then(function (response) {
-                    return response.data;
-                });
+            return $http
+                .get('http://localhost:56706/api/players/' + id);
         }
 
         function save(player) {
@@ -22,25 +19,12 @@
         }
 
         function  update(player) {
-            $http({
-                url: 'http://localhost:56706',
-                method: 'PUT',
-                data: {
-                    "Email": player.Email,
-                    "FirstName": player.FirstName,
-                    "LastName": player.LastName,
-                    "FieldPosition": player.FieldPosition,
-                    "StrongFoot": player.StrongFoot,
-                    "Picture": player.Picture
-                }
-            })
-                .then(function (response) {
-                    return response.data;
-                });
+           return $http
+               .put('http://localhost:56706/api/players', player);
         }
 
         function remove(player) {
-            $http({
+           return $http({
                 url: 'http://localhost:56706',
                 method: 'DELETE',
                 data: {

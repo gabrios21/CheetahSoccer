@@ -72,11 +72,11 @@
     <Content Include="Components\Games\games.html" />
     <Content Include="Components\Home\home.controller.js" />
     <Content Include="Components\Home\home.html" />
-    <Content Include="Components\Player\players.component.js" />
+    <Content Include="Components\Player\edit.controller.js" />
+    <Content Include="Components\Player\edit.html" />
     <Content Include="Components\Player\players.controller.js" />
-    <Content Include="Components\Register\register.controller.js" />
-    <Content Include="Components\Register\register.html" />
-    <Content Include="Components\Welcome\welcome.component.js" />
+    <Content Include="Components\Player\register.controller.js" />
+    <Content Include="Components\Player\register.html" />
     <Content Include="Factories\data-access.js" />
     <Content Include="Components\Nav\nav.html" />
     <Content Include="route-config.js" />
@@ -176,7 +176,9 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Components\Edit\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

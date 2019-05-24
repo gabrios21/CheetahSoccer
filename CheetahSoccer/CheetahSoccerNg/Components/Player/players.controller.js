@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    function playersController(dataAccess) {
+    function playersController(dataAccess, $location) {
 
         var vm = this;
         vm.allPlayers = [];
@@ -11,7 +11,7 @@
             });
 
         vm.edit = function (player) {
-            console.log(player);
+            $location.path('player/edit/' + player.Id);
         };
     }
 
